@@ -14,3 +14,23 @@ IMPORTANTE
 4) Se utilizará Google Form para crear ambos fomularios, por lo que progrma debe extraer dichos datos y registrarlos en la BD.
 
 5) Los que van a rellenar los formularios deben ser estudiantes y la coordinadora de media general, mientras que la BD solo será accesible para la coordinadora de media general y la directora del instituto.
+
+Etapa 1: Definición y Planeación (antes de programar)
+
+-Reunión con el colegio
+    -Confirma qué esperan exactamente:
+
+-Diseñar el formato de las encuestas
+
+-Prepara un cuestionario modelo (10–12 preguntas con escala Likert + comentarios).
+
+-Valídalo con directivos para que lo aprueben antes de codificar.
+
+-Diseñar el modelo de datos
+
+-Hacer un Diagrama Entidad-Relación de la base de datos.
+
+-Crear Mockups de la interfaz (Figma o Balsamiq)
+    -Login
+    -Formulario de evaluación
+    -Dashboard para administrativos
