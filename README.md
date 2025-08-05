@@ -3,7 +3,7 @@
 IMPORTANTE
 
 1) Se debe de crear un programa, en la que:
-    1.1) Los estudiantes de media general evaluen a sys profesores de manera anonima.
+    1.1) Los estudiantes de media general evaluen a sus profesores de manera anonima.
     1.2) Sacar un promedio de las calificaciones de cada profesor.
     1.3) Mostrar las clasificaciones de los profesores dependiendo de los grados que imparte clases.
 
