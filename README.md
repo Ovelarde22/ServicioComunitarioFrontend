@@ -11,9 +11,7 @@ IMPORTANTE
 
 3) Se debera de crear una BD para almacenar los datos de los profesores y las calificaciones que reciban.
 
-4) Se utilizará Google Form para crear ambos fomularios, por lo que progrma debe extraer dichos datos y registrarlos en la BD.
-
-5) Los que van a rellenar los formularios deben ser estudiantes y la coordinadora de media general, mientras que la BD solo será accesible para la coordinadora de media general y la directora del instituto.
+4) Los que van a rellenar los formularios deben ser estudiantes y la coordinadora de media general, mientras que la BD solo será accesible para la coordinadora de media general y la directora del instituto.
 
 Etapa 1: Definición y Planeación (antes de programar)
 
@@ -34,3 +32,12 @@ Etapa 1: Definición y Planeación (antes de programar)
     -Login
     -Formulario de evaluación
     -Dashboard para administrativos
+
+-Herramientas a utilizar:
+    -Diseño -> Figma o Balsamiq
+    -Front -> React
+    -Back -> Express
+    -Dashborad - chart.js
+    -Base de Datos -> MongoDB
+    -Despliegue -> Vercel
+    -Control de versiones -> GitHub
