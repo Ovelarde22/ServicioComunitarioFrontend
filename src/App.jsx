@@ -5,16 +5,16 @@ function App() {
         <article>
           <h1>¿Qué cuestionario desea revisar?</h1>
           <figure>
-            <img src="../public/escudoSanJose.png" className="imgEscudo" />
-            <button type="button" className="btnCuestEstu">
-              <img src="../public/Cuestionario.svg" className="imgCuestEstu" />
-              <p>Cuestionario a estudiantes</p>
-            </button>
-            <button type="button" className="btnCuestProf">
-              <img src="../public/profesor.png" className="imgCuestProf" />
-              <p>Cuestionario a profesores</p>
-            </button>
+            <img src="../public/escudoSanJose.svg" className="imgLogoSJ" />
           </figure>
+          <button type="button" className="btnCuestEstu">
+            <img src="../public/Cuestionario.svg" className="imgCuestEstu" />
+            <p>Cuestionario a estudiantes</p>
+          </button>
+          <button type="button" className="btnCuestProf">
+            <img src="../public/profesor.svg" className="imgCuestProf" />
+            <p>Cuestionario a profesores</p>
+          </button>
         </article>
       </main>
     </>

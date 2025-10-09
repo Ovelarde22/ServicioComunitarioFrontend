@@ -33,6 +33,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 700;
+  margin: 0.2em 0 0.4em;
+  position: relative;
+  left: 25%;
+  top: 30px;
 }
 
 button {
@@ -46,55 +51,63 @@ button {
   background-color: #045ed3;
   cursor: pointer;
   transition: border-color 0.25s;
-  position: relative;
-  right: 400px;
+  width: 100%;
+  max-width: 700px;
 }
 button:hover {
   border-color: #646cff;
   background-color: #003a86;
+  transform: translateY(-5px);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.imgLogoSJ {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  left: 730px;
+  top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+.imgCuestProf,
 .imgCuestEstu {
-  height: 150px;
-  width: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
 }
 
-.imgCuestProf {
-  height: 150px;
-  width: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.imgEscudo {
-  position: relative;
-  left: 900px;
-}
-
-.btnCuestEstu {
-  position: relative;
-  bottom: 250px;
-}
-
+.btnCuestEstu,
 .btnCuestProf {
   position: relative;
-  right: 697px;
-  top: 10px;
+  bottom: 250px;
+  left: 50px;
+
+  width: 700px;
+  height: 140px;
+  max-width: 90vw;
+
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 15px 0;
 }
 
-p {
-  max-width: 540px;
-  margin-top: 0;
-  margin-bottom: 1.5em;
-  font-size: 1.25em;
-  line-height: 1.5;
-  position: relative;
+.btnCuestEstu p,
+.btnCuestProf p {
+  margin: 0;
+  font-size: 1.1em;
+  color: white;
 }
 
 @media (prefers-color-scheme: light) {
