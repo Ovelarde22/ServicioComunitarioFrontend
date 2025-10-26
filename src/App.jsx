@@ -1,24 +1,36 @@
-function App() {
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useState } from "react";
+import Login from "./pages/Login";
+import Inicio from "./pages/Admin/Inicio";
+import SeleccionTipo from "./pages/Admin/SeleccionTipo";
+
+export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <>
-      <main className="main">
-        <article>
-          <h1>¿Qué cuestionario desea revisar?</h1>
-          <figure>
-            <img src="../public/escudoSanJose.svg" className="imgLogoSJ" />
-          </figure>
-          <button type="button" className="btnCuestEstu">
-            <img src="../public/Cuestionario.svg" className="imgCuestEstu" />
-            <p>Cuestionario a estudiantes</p>
-          </button>
-          <button type="button" className="btnCuestProf">
-            <img src="../public/profesor.svg" className="imgCuestProf" />
-            <p>Cuestionario a profesores</p>
-          </button>
-        </article>
-      </main>
-    </>
+    <Routes>
+      {/* 🔹 Pantalla de login */}
+      <Route
+        path="/login"
+        element={<Login onLoginSuccess={() => setIsLoggedIn(true)} />}
+      />
+
+      {/* 🔹 Pantalla principal post-login */}
+      <Route
+        path="/home"
+        element={isLoggedIn ? <Inicio /> : <Navigate to="/login" replace />}
+      />
+
+      {/* 🔹 Nueva pantalla intermedia (Estudiantes o Profesores) */}
+      <Route
+        path="/home/:tipo"
+        element={
+          isLoggedIn ? <SeleccionTipo /> : <Navigate to="/login" replace />
+        }
+      />
+
+      {/* 🔹 Cualquier otra ruta redirige al login */}
+      <Route path="*" element={<Navigate to="/login" replace />} />
+    </Routes>
   );
 }
-
-export default App;
