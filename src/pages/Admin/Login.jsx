@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoginHeader from "../components/LoginHeader";
-import LoginForm from "../components/LoginForm";
-import LoginImage from "../components/LoginImage";
+import LoginHeader from "../../components/LoginHeader";
+import LoginForm from "../../components/LoginForm";
+import LoginImage from "../../components/LoginImage";
 
 function Login({ onLoginSuccess }) {
   const navigate = useNavigate();
