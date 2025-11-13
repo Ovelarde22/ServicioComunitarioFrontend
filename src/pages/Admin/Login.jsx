@@ -52,10 +52,6 @@ function Login({ onLoginSuccess }) {
             error={error}
             onSubmit={handleSubmit}
           />
-          <p className="mt-10 text-xs text-center text-gray-400 leading-relaxed">
-            © 2025 Colegio San José De Tarbes <br />
-            Sistema de acceso a encuestas
-          </p>
         </div>
         <LoginImage />
       </div>

@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import Login from "./pages/Admin/Login";
 import Inicio from "./pages/Admin/Inicio";
 import ListaEncuestasProfes from "./pages/Admin/Profesores/ListaEncuestas";
+import ListaEncuestasEstudiantes from "./pages/Admin/Estudiantes/ListaEncuestas";
 
 export default function App() {
   //const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -54,6 +55,18 @@ export default function App() {
         element={
           isLoggedIn ? (
             <ListaEncuestasProfes />
+          ) : (
+            <Navigate to="/login" replace />
+          )
+        }
+      />
+
+      {/* 🔹 Lista de encuestas para profesores */}
+      <Route
+        path="/admin/estudiantes/encuestas"
+        element={
+          isLoggedIn ? (
+            <ListaEncuestasEstudiantes />
           ) : (
             <Navigate to="/login" replace />
           )

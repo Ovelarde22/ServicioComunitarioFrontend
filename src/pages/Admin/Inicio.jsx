@@ -124,8 +124,7 @@ export default function Inicio() {
                 if (tipoSeleccionado === "profesores") {
                   navigate("/admin/profesores/encuestas");
                 } else if (tipoSeleccionado === "estudiantes") {
-                  // más adelante: navigate("/admin/estudiantes/encuestas");
-                  alert("Hub de encuestas para Estudiantes (pendiente)");
+                  navigate("/admin/estudiantes/encuestas");
                 }
               }}
             >

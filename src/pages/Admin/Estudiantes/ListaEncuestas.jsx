@@ -49,7 +49,7 @@ export default function ListaEncuestasProfes() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-800">
-            Cuestionarios — Profesores
+            Cuestionarios — Estudiantes
           </h1>
           <p className="text-gray-600 text-sm">
             Administra las encuestas existentes o crea una nueva.
