@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Inicio() {
   const [tipoSeleccionado, setTipoSeleccionado] = useState(null);
-
+  const navigate = useNavigate();
   // 🔹 Cuando el usuario selecciona Estudiantes o Profesores
   const handleSeleccion = (tipo) => {
     setTipoSeleccionado(tipo);
@@ -119,9 +120,14 @@ export default function Inicio() {
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <button
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
-              onClick={() =>
-                alert(`Modificar cuestionario de ${tipoSeleccionado}`)
-              }
+              onClick={() => {
+                if (tipoSeleccionado === "profesores") {
+                  navigate("/admin/profesores/encuestas");
+                } else if (tipoSeleccionado === "estudiantes") {
+                  // más adelante: navigate("/admin/estudiantes/encuestas");
+                  alert("Hub de encuestas para Estudiantes (pendiente)");
+                }
+              }}
             >
               Modificar Cuestionario
             </button>

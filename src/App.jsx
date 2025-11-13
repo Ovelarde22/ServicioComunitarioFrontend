@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import Login from "./pages/Admin/Login";
 import Inicio from "./pages/Admin/Inicio";
+import ListaEncuestasProfes from "./pages/Admin/Profesores/ListaEncuestas";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,6 +19,18 @@ export default function App() {
       <Route
         path="/home"
         element={isLoggedIn ? <Inicio /> : <Navigate to="/login" replace />}
+      />
+
+      {/* 🔹 Lista de encuestas para profesores */}
+      <Route
+        path="/admin/profesores/encuestas"
+        element={
+          isLoggedIn ? (
+            <ListaEncuestasProfes />
+          ) : (
+            <Navigate to="/login" replace />
+          )
+        }
       />
 
       {/* 🔹 Cualquier otra ruta redirige al login */}
