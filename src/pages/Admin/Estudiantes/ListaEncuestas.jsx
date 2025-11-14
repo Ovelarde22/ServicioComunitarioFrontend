@@ -64,7 +64,9 @@ export default function ListaEncuestasProfes() {
             ← Volver al Inicio
           </button>
           <button
-            onClick={() => navigate("/admin/profesores/encuestas/nueva")}
+            onClick={() =>
+              alert("Crear nueva encuesta para Estudiantes (pendiente)")
+            }
             className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-semibold"
           >
             + Nueva encuesta

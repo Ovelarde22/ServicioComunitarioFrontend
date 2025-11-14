@@ -4,6 +4,7 @@ import Login from "./pages/Admin/Login";
 import Inicio from "./pages/Admin/Inicio";
 import ListaEncuestasProfes from "./pages/Admin/Profesores/ListaEncuestas";
 import ListaEncuestasEstudiantes from "./pages/Admin/Estudiantes/ListaEncuestas";
+import NuevaEvaluacionDocenteProfes from "./pages/Admin/Profesores/NuevaEvaluacionDocenteProfes";
 
 export default function App() {
   //const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -61,12 +62,23 @@ export default function App() {
         }
       />
 
-      {/* 🔹 Lista de encuestas para profesores */}
+      {/* 🔹 Lista de encuestas para estudiantes */}
       <Route
         path="/admin/estudiantes/encuestas"
         element={
           isLoggedIn ? (
             <ListaEncuestasEstudiantes />
+          ) : (
+            <Navigate to="/login" replace />
+          )
+        }
+      />
+
+      <Route
+        path="/admin/profesores/encuestas/nueva"
+        element={
+          isLoggedIn ? (
+            <NuevaEvaluacionDocenteProfes />
           ) : (
             <Navigate to="/login" replace />
           )
